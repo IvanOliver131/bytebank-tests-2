@@ -1,6 +1,10 @@
 describe('Página inicial', () => {
-  it('Deve renderizar o título principal com o texto correto', () => {
+  beforeEach(() => {
+    // Antes de cada teste visitamos a URL da página
     cy.visit('http://localhost:3000');
+  });
+
+  it('Deve renderizar o título principal com o texto correto', () => {
     // Dessa forma utilizamos o comando personalizado
     cy.getByData('titulo-principal').contains(
       'Experimente mais liberdade no controle da sua vida financeira. Crie sua conta com a gente!'
