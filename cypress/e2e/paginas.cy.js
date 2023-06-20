@@ -1,5 +1,6 @@
 describe('Testando múltiplas páginas', () => {
-  it('Deve conseguir acessar a página de cartões', () => {
+  // Podemos escolher qual navegador ira abrir os testes
+  it('Deve conseguir acessar a página de cartões', { browser: 'edge' }, () => {
     cy.visit('/');
     cy.getByData('botao-login').click();
     cy.getByData('email-input').type('neilton@alura.com');
