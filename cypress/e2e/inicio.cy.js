@@ -1,7 +1,7 @@
 describe('Página inicial', () => {
   beforeEach(() => {
     // Antes de cada teste visitamos a URL da página
-    cy.visit('http://localhost:3000');
+    cy.visit('/');
   });
 
   it('Deve renderizar o título principal com o texto correto', () => {
